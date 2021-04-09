@@ -1,2 +1,1 @@
-# ps4jb7.5x
-Jailbreak 7.50~7.55
+# ps4jb750-755

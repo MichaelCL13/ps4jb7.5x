@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html manifest="cache.manifest"><head>
+<title>PS4 7.50-7.55 Host v1.0 MichaelCL13</title>
+<style>
+html, body {
+background-image: url('img.jpg');
+background-attachment: fixed;
+background-size:100%;
+background-repeat:no-repeat;
+background-color: #24272b;
+color:white;
+margin-top: 0px;
+margin-left: 0px;
+margin-right: 0px;
+overflow: hidden;
+}
+h1 {
+text-shadow: 0.1em 0.1em 0.2em black;
+font-size:25px;
+text-align:center;
+color:white;
+}
+.btn {
+width: 262px;
+height: 49px;
+padding-top: 10px;
+padding-bottom: 13px;
+text-align: center;
+text-decoration: none;
+display: inline-block;
+font-size: 20px;
+margin-top: 15px;
+margin-bottom: 5px;
+margin-left: 15px;
+margin-right: 5px;
+border-bottom-width: 0px;
+border-right-width: 0px;
+border-top-width: 0px;
+border-left-width: 0px;
+-webkit-transition-duration: 0.4s;
+transition-duration: 0.4s;
+cursor: pointer;
+}
+.btn-main {
+background-color: #566584;
+color: white;
+border-radius: 10px;
+}
+.btn-main:hover {
+background-color: #0058b1;
+color: white;
+    border-radius: 8px;
+}
+.btn-web {
+background-color: #84C1FF;
+color: white;
+border-radius: 8px;
+}
+.btn-web:hover {
+background-color: #18891b;
+color: white;
+border-radius: 8px;
+}
+.btn-page {
+background-color: #b10000;
+color: white;
+border-radius: 8px;
+}
+.btn-page:hover {
+background-color: #f31414;
+color: white;
+border-radius: 8px;
+}
+</style>
+<script>
+function DLProgress(e){Percent=(Math.round(e.loaded / e.total * 100));document.getElementById="display:none";window.msgs.innerHTML="Installing Offline Cache: " + Percent + "%";}
+function DisplayCacheProgress(){setTimeout(function(){window.msgs.innerHTML="Cache Installed Successfully ✔";},1000);setTimeout(function(){window.msgs.innerHTML="Now Close And Re-Open Your Browser ...";},3000);}window.applicationCache.addEventListener("progress",DLProgress,false);window.applicationCache.oncached=function(e){DisplayCacheProgress();};window.applicationCache.onupdateready=function(e){DisplayCacheProgress();};
+document.cookie = 'kex=1';
+</script>
+</head>
+<h1 id=msgs>PS4 7.50-7.55 Host v1.0 MichaelCL13</h1>
+<hr>
+<br>
+<h1 style="font-size:32px;text-align:center;color:red;">Experimentara problemas de memoria insuficiente en el navegador! (Debe seguir Intentandolo)</h1>
+<div style="text-align:center">
+<button class="btn btn-main" onmouseover="mainpayload1()" onmouseout="pagetitle()" onclick=load_goldhen()> GoldHEN </button>
+<button class="btn btn-main" onmouseover="mainpayload2()" onmouseout="pagetitle()" onclick=load_mira75x()> MIRA 7.5x </button>
+<button class="btn btn-main" onmouseover="mainpayload3()" onmouseout="pagetitle()" onclick=load_mira2b()> MIRA-BIX </button>
+<button class="btn btn-main" onmouseover="mainpayload4()" onmouseout="pagetitle()" onclick=load_binloader()> Bin Loader </button>
+<br>
+<h1 style="font-size:20px;text-align:center;">Payloads</h1>
+<button class="btn btn-main" onmouseover="todex()" onmouseout="pagetitle()" onclick=load_todex()> ToDex </button>
+<button class="btn btn-main" onmouseover="dumper()" onmouseout="pagetitle()" onclick=load_dumper()> Dumper </button>
+<button class="btn btn-main" onmouseover="ftp()" onmouseout="pagetitle()" onclick=load_ftp()> FTP </button>
+<button class="btn btn-main" onmouseover="linux3gb()" onmouseout="pagetitle()" onclick=load_linux3gb()> Linux 3VRAM </button>
+<br>
+<button class="btn btn-main" onmouseover="linux1gb()" onmouseout="pagetitle()" onclick=load_linux1gb()> Linux 1VRAM </button>
+<button class="btn btn-main" onmouseover="disableUpdates()" onmouseout="pagetitle()" onclick=load_disableUpdates()> Deshabilita Actualizaciones </button>
+<button class="btn btn-main" onmouseover="dbackup()" onmouseout="pagetitle()" onclick=load_dbackup()> Hacer Copiar BD PS4 </button>
+<button class="btn btn-main" onmouseover="dbrestore()" onmouseout="pagetitle()" onclick=load_dbrestore()> Restaurar Copia BD PS4 </button>
+<br>
+<button class="btn btn-main" onmouseover="historyBlocker()" onmouseout="pagetitle()" onclick=load_historyBlocker()> Bloqueador de Historial </button>
+<button class="btn btn-main" onmouseover="ebrowser()" onmouseout="pagetitle()" onclick=load_ebrowser()> Habilitar Navegador </button>
+<button class="btn btn-main" onmouseover="kernelDump()" onmouseout="pagetitle()" onclick=load_kernelDump()> Hacer Copia del Kernel </button>
+<button class="btn btn-main" onmouseover="kernelClock()" onmouseout="pagetitle()" onclick=load_kernelClock()> Reloj del Kernel </button>
+<br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+<button class="btn btn-main" onmouseover="ps4debug()" onmouseout="pagetitle()" onclick=load_ps4debug()> Depuracion PS4 </button>
+<button class="btn btn-main" onmouseover="disbaslr()" onmouseout="pagetitle()" onclick=load_disbAslr()> Deshabilitar ASLR </button>
+<button class="btn btn-main" onmouseover="rifrenamer()" onmouseout="pagetitle()" onclick=load_rifRen()> Renombrar RIF's </button>
+<button class="btn btn-main" onmouseover="fanthreshold()" onmouseout="pagetitle()"  style="margin-right:10px" onclick=load_fanthreshold()> Control de Ventiladores </button><select id="tempC"></select>&#176;C
+<br>
+<button class="btn btn-main" onmouseover="exitidu()" onmouseout="pagetitle()" onclick=load_exitidu()> Salir de MODO IDU </button>
+<button class="btn btn-main" onmouseover="gtavmods()" onmouseout="pagetitle()" onclick=load_gtavmods()> GTA V Mods </button>
+<button class="btn btn-main" onmouseover="webrte()" onmouseout="pagetitle()" onclick=load_webrte()> WebRTE </button>
+<button class="btn btn-web" onmouseover="ps4trainer()" onmouseout="pagetitle()" onclick=load_ps4trainer()> PS4 Trainer Web </button>&nbsp
+<hr style="margin-top: 62px;">
+<h1 style="font-size:18px;text-align:center;margin-top: 12px;color:yellow;">Muchos Agradecimientos para:&nbsp&nbsp<a href="https://twitter.com/sleirsgoevy" style="color:#f31414;">@sleirsgoevy</a>&nbsp&nbsp<a href="https://twitter.com/_AlAzif" style="color:#f31414;">@_AlAzif</a>&nbsp&nbsp<a href="https://twitter.com/gamerhack" style="color:#f31414;">@GamerHack93</a>&nbsp&nbsp<a style="color:white;"></style>Y a todos los que siguen apoyando este proyecto del SCENE PS4</a>&nbsp&nbsp</h1>
+<br>
+</div>
+<script>
+function mainpayload1(){
+document.getElementById("msgs").innerHTML = "GOLDHEN v1.1 para todos los sistemas 7.55 (Incluye arreglo temporal para error CE-30391-6)";
+}
+function mainpayload2(){
+document.getElementById("msgs").innerHTML = "MIRA para todos los sistemas 7.5x";
+}
+function mainpayload3(){
+document.getElementById("msgs").innerHTML = "MIRA para todos los sistemas 7.5x + Spoof (Incluye arreglo temporal para error CE-30391-6)";
+}
+function mainpayload4(){
+document.getElementById("msgs").innerHTML = "Inyectar una carga util usando el IP de la consola y el Puerto 9021";
+}
+function todex(){
+document.getElementById("msgs").innerHTML = "Habilitar alguna funciones de depuracion disponibles en TestKit";
+}
+function dumper(){
+document.getElementById("msgs").innerHTML = "Dumpear tus Juegos (Es necesario USB en exFAT y el fichero (dumper.cfg en la raiz del USB))";
+}
+function ftp(){
+document.getElementById("msgs").innerHTML = "Accede a la consola a traves de FTP (TENGA CUIDADO CON LO QUE MUEVE O BORRA)";
+}
+function linux3gb(){
+document.getElementById("msgs").innerHTML = "Cargar Linux 3VRAM para Emuladores y Modo PC";
+}
+function linux1gb(){
+document.getElementById("msgs").innerHTML = "Cargar Linux 1VRAM para Emuladores y Modo PC";
+}
+function disableUpdates(){
+document.getElementById("msgs").innerHTML = "Deshabilitar Actualizaciones del Sistema";
+}
+function dbackup(){
+document.getElementById("msgs").innerHTML = "Crea una copia de seguridad de la base de datos de la consola y su usuario en una USB";
+}
+function dbrestore(){
+document.getElementById("msgs").innerHTML = "Restaurar copia de seguridad de la base de datos desde el USB";
+}
+function historyBlocker(){
+document.getElementById("msgs").innerHTML = "Desactivar el historial, solo mostrar paginas utilizadas con frecuencia una vez abiertas";
+}
+function ebrowser(){
+document.getElementById("msgs").innerHTML = "Habilitar el Navegador de nuestro PS4";
+}
+function kernelDump(){
+document.getElementById("msgs").innerHTML = "Dumpear el Kernel de la consola a una USB";
+}
+function kernelClock(){
+document.getElementById("msgs").innerHTML = "Cambiar la hora del reloj del Kernel de nuestra PS4";
+}
+function ps4debug(){
+document.getElementById("msgs").innerHTML = "Activar una Cuenta de usuario sin Internet";
+}
+function disbaslr(){
+document.getElementById("msgs").innerHTML = "Deshabilita el ASLR (Aleatorizacion de diseños de espacios de direcciones";
+}
+function rifrenamer(){
+document.getElementById("msgs").innerHTML = "Cambiar el nombre de los RIFs 'FAKE' a RIFs 'FREE'";
+}
+function fanthreshold(){
+document.getElementById("msgs").innerHTML = "Modifica la Velocidad de los Ventiladores";
+}
+function exitidu(){
+document.getElementById("msgs").innerHTML = "Desactivar el MODO IDU, si lo activo por error";
+}
+function gtavmods(){
+document.getElementById("msgs").innerHTML = "Elija trucos deseados para GTA V (Haga click aqui para cargar subpagina)";
+}
+function webrte(){
+document.getElementById("msgs").innerHTML = "Necesario para activar trucos a traves de sitio web de PS4 Trainer";
+}
+function ps4trainer(){
+document.getElementById("msgs").innerHTML = "Sitio WEB de PS4 TRAINER (Siga las Instrucciones)";
+}
+function pagetitle(){
+document.getElementById("msgs").innerHTML = "PS4 7.50-7.55 Host v1.0 MichaelCL13";
+}
+
+for(var i=50; i<=75; i=i+5){
+    var select = document.getElementById("tempC");
+    var option = document.createElement("OPTION");
+	select.options.add(option);
+	option.text = i;
+	option.value = i;
+}
+tempC.value=60;
+
+function load_goldhen(){
+
+  var link = document.createElement('a');
+        document.body.appendChild(link);
+        link.href = 'payload.html#f=goldhen_755.js';
+        link.click();
+}
+function load_mira75x(){
+
+  var link = document.createElement('a');
+        document.body.appendChild(link);
+        link.href = 'mira-75x.html';
+        link.click();
+}
+function load_mira2b(){
+
+  var link = document.createElement('a');
+        document.body.appendChild(link);
+        link.href = 'payload.html#f=mira2b.js';
+        link.click();
+}
+function load_binloader(){
+
+  var link = document.createElement('a');
+        document.body.appendChild(link);
+        link.href = 'payload.html';
+        link.click();
+}
+function load_todex(){
+
+  var link = document.createElement('a');
+        document.body.appendChild(link);
+        link.href = 'payload.html#f=todex.js';
+        link.click();
+}
+function load_dumper(){
+
+  var link = document.createElement('a');
+        document.body.appendChild(link);
+        link.href = 'payload.html#f=app-dumper.js';
+        link.click();
+}
+function load_ftp(){
+
+  var link = document.createElement('a');
+        document.body.appendChild(link);
+        link.href = 'payload.html#f=ftp.js';
+        link.click();
+}
+function load_linux3gb(){
+
+  var link = document.createElement('a');
+        document.body.appendChild(link);
+        link.href = 'payload.html#f=linux3gb.js';
+        link.click();
+}
+function load_linux1gb(){
+
+  var link = document.createElement('a');
+        document.body.appendChild(link);
+        link.href = 'payload.html#f=linux1gb.js';
+        link.click();
+}
+function load_disableUpdates(){
+
+  var link = document.createElement('a');
+        document.body.appendChild(link);
+        link.href = 'payload.html#f=disable-updates.js';
+        link.click();
+}
+function load_dbackup(){
+
+  var link = document.createElement('a');
+        document.body.appendChild(link);
+        link.href = 'payload.html#f=backup.js';
+        link.click();
+}
+function load_dbrestore(){
+
+  var link = document.createElement('a');
+        document.body.appendChild(link);
+        link.href = 'payload.html#f=restore.js';
+        link.click();
+}
+function load_historyBlocker(){
+
+  var link = document.createElement('a');
+        document.body.appendChild(link);
+        link.href = 'payload.html#f=history-blocker.js';
+        link.click();
+}
+function load_ebrowser(){
+
+  var link = document.createElement('a');
+        document.body.appendChild(link);
+        link.href = 'payload.html#f=enable-browser.js';
+        link.click();
+}
+function load_kernelDump(){
+
+  var link = document.createElement('a');
+        document.body.appendChild(link);
+        link.href = 'payload.html#f=kernel-dumper.js';
+        link.click();
+}
+function load_kernelClock(){
+
+  var link = document.createElement('a');
+        document.body.appendChild(link);
+        link.href = 'payload.html#f=kernel-clock.js';
+        link.click();
+}
+function load_ps4debug(){
+
+  var link = document.createElement('a');
+        document.body.appendChild(link);
+        link.href = 'payload.html#f=ps4debug.js';
+        link.click();
+}
+function load_disbAslr(){
+
+  var link = document.createElement('a');
+        document.body.appendChild(link);
+        link.href = 'payload.html#f=disable-aslr.js';
+        link.click();
+}
+function load_rifRen(){
+
+  var link = document.createElement('a');
+        document.body.appendChild(link);
+        link.href = 'payload.html#f=rif-renamer.js';
+        link.click();
+}
+function load_fanthreshold(){
+
+  var link = document.createElement('a');
+        document.body.appendChild(link);
+        link.href = "payload.html#f=fan-threshold"+tempC.value+".js";
+        link.click();
+}
+function load_exitidu(){
+
+  var link = document.createElement('a');
+        document.body.appendChild(link);
+        link.href = 'payload.html#f=idu.js';
+        link.click();
+}
+function load_gtavmods(){
+
+  var link = document.createElement('a');
+        document.body.appendChild(link);
+        link.href = 'gtav-mods.html';
+        link.click();
+}
+function load_webrte(){
+
+  var link = document.createElement('a');
+        document.body.appendChild(link);
+        link.href = 'payload.html#f=webrte.js';
+        link.click();
+}
+function load_ps4trainer(){
+
+  var link = document.createElement('a');
+        document.body.appendChild(link);
+        link.href = 'http://ps4trainer.com/Trainer/index.html';
+        link.click();
+}
+function load_morepls(){
+
+  var link = document.createElement('a');
+        document.body.appendChild(link);
+        link.href = 'more-plds.html';
+        link.click();
+}
+</script>
+</body>
+</html>
